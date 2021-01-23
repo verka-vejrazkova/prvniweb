@@ -1,11 +1,302 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+/*
+ BARVY
+ pozadi           #f5f5f5
+ dekorace nadpisů #629edb
+*/
+
 body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  font-family: "Merriweather", serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* HLAVICKA */
+header {
+  color: white;
   text-align: center;
+  background-image: url('images/lod.jpg');
+  background-repeat: no-repeat; 
+  width: 100%;
+  padding: 1rem;
 }
 
-h1 {
-  color: blue;
+.podtrzitko {
+  font-weight: bold;
 }
 
-p {
-  font-size: 1.1rem;
+.podtrzitko1 {
+  font-weight: bold;
+  color: #629edb;
+  margin: 0;
+}
+
+.podtrzitko2 {
+  font-weight: bold;
+  color: #629edb;
+}
+
+.titulek {
+  font-family: "Raleway", serif;
+  font-size: 4rem;
+}
+
+/* MENU */
+
+.menu {
+  text-align: center;
+  max-width: 90vw;
+}
+
+h2 {
+  padding: 1rem;
+}
+.menu li {
+  list-style: none;
+  padding: 1rem;
+  border-bottom: 1px solid grey;
+}
+
+.menu a {
+  text-decoration: none;
+  color: gray;
+  text-transform: uppercase;
+}
+
+/* OBSAH */
+
+.velky-obrazek {
+  width: 100vw;
+}
+
+.odstavec {
+  padding: 1rem;
+}
+
+.popisek {
+  text-align: center;
+  color: gray;
+}
+
+.popisek a {
+  color: gray;
+}
+
+/* FOTOGALERIE */
+
+.foto {
+  width: 100%;
+  margin: 0;
+}
+
+/* PATICKA */
+.paticka {
+  color: grey;
+  padding: 1rem;
+}
+.paticka a {
+  color: gray;
+}
+
+@media (min-width: 500px) {
+
+  .menu {
+    display: flex;
+    justify-content: center;
+  }
+
+  .galerie .foto {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+  }
+
+  .galerie {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  figure {
+    position: relative;
+    margin-right: 0;
+  }
+
+  .galerie .foto img{
+    margin:0;
+    width: 100%;
+    
+  }
+
+  .galerie .popisek {
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    text-align: end;
+    color: white;
+    display: none;
+  }
+
+  .galerie .popisek a {
+    color: white;
+    display: none;
+  }
+
+.trava,
+.ledovec,
+.vodopad
+ {
+  position: relative;
+}
+
+  .trava .popisek {
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    color: white;
+  }
+
+.ledovec .popisek {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  color: white;
+}
+
+.vodopad .popisek 
+{
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  color: white;
+}
+
+  .popisek a{
+    color: white;
+  }
+
+  .foto:hover 
+  .popisek {display: block; opacity: 1}
+
+  .foto:hover 
+  .popisek a {display: block; opacity: 1}
+
+
+
+
+
+
+@media (min-width: 1000px) {
+}
+
+.body{
+  display: flex;
+  justify-content: center;
+}
+
+
+.velky-box {
+width: 75%;
+background-color: white;
+margin: -7%;
+margin-left: 12.5%;
+justify-content: center;
+box-shadow: 1px 0px 30px #959595;
+}
+
+.foto img{
+  margin:0;
+  width: 75%;
+  
+}
+
+.velky-obrazek {
+  width: 100%;
+}
+
+header {
+  color: white;
+  text-align: center;
+  background-image: url('images/lod.jpg');
+  width: 100%;
+  height: 100%;
+  padding-bottom: 10rem;
+}
+
+header p {
+  margin-left: 20%;
+  margin-right: 20%;
+
+
+}
+
+.galerie .foto {
+  width: calc(100%/3);
+}
+
+.galerie {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.paticka{
+  margin-top:10%;
+}
+.paticka p{
+  margin-left: 12.5%;
+}
+
+.proc {
+  padding-right: 20%;
+  padding-left: 5%;
+}
+
+.co-musite-videt,
+.odstavec-vodopad
+ {
+  padding-left: 20%;
+  padding-right: 5%;
+}
+
+
+.fotogalerie {
+  padding-left: 5%;
+}
+
+.odstavec-s-menu {
+  display: flex;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.menu {
+  flex-direction: column;
+  height: 25%;
+  text-align: start;
+  width: 30%;
+  font-size: 0.7rem;
+}
+
+
+.menu a {
+  text-transform: uppercase;
+}
+
+.uvod {
+  width: 70%;
+  padding-left: 5%;
 }
